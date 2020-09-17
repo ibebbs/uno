@@ -7,11 +7,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using Uno.Extensions;
+using Uno.Roslyn;
+
+#if NETFRAMEWORK
 using Uno.SourceGeneration;
+#endif
 
 namespace Uno.UI.SourceGenerators.TSBindings
 {
-	class TSBindingsGenerator : SourceGenerator
+	[Generator]
+	class TSBindingsGenerator : ISourceGenerator
 	{
 		private string _bindingsPaths;
 		private string[] _sourceAssemblies;
@@ -28,11 +33,16 @@ namespace Uno.UI.SourceGenerators.TSBindings
 		private static INamedTypeSymbol _structLayoutSymbol;
 		private static INamedTypeSymbol _interopMessageSymbol;
 
-		public override void Execute(SourceGeneratorContext context)
+		public void Initialize(GeneratorInitializationContext context)
 		{
-			var project = context.GetProjectInstance();
-			_bindingsPaths = project.GetPropertyValue("TSBindingsPath")?.ToString();
-			_sourceAssemblies = project.GetItems("TSBindingAssemblySource").Select(s => s.EvaluatedInclude).ToArray();
+		}
+
+		public void Execute(GeneratorExecutionContext context)
+		{
+			DependenciesInitializer.Init(context);
+
+			_bindingsPaths = context.GetMSBuildPropertyValue("TSBindingsPath")?.ToString();
+			_sourceAssemblies = context.GetMSBuildItems("TSBindingAssemblySource").Select(i => i.Identity).ToArray();
 
 			if(!string.IsNullOrEmpty(_bindingsPaths))
 			{

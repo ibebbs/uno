@@ -248,16 +248,28 @@
 	<file src="..\src\Uno.Analyzers\Bin\Release\Uno.Analyzers.dll" target="analyzers" />
 	<file src="..\src\Uno.Analyzers\Bin\Release\Uno.Analyzers.pdb" target="analyzers" />
 
-	<!-- Source generators -->
-	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.UI.SourceGenerators.dll" target="tools" />
-	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.Xaml.dll" target="tools" />
-	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.Xaml.pdb" target="tools" />
-	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.UI.SourceGenerators.pdb" target="tools" />
-	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Mono.Cecil*.dll" target="tools" />
-	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Mono.Cecil*.pdb" target="tools" />
-	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Microsoft.ApplicationInsights.dll" target="tools" />
-	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\System.Diagnostics.DiagnosticSource.dll" target="tools" />
-	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Microsoft.DotNet.PlatformAbstractions.dll" target="tools" />
+	<!-- Uno Source generators -->
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.UI.SourceGenerators.dll" target="tools/uno-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.Xaml.dll" target="tools/uno-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.Xaml.pdb" target="tools/uno-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.UI.SourceGenerators.pdb" target="tools/uno-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Mono.Cecil*.dll" target="tools/uno-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Mono.Cecil*.pdb" target="tools/uno-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Microsoft.ApplicationInsights.dll" target="tools/uno-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\System.Diagnostics.DiagnosticSource.dll" target="tools/uno-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Microsoft.DotNet.PlatformAbstractions.dll" target="tools/uno-sourcegen" />
+
+	<!-- Roslyn Source generators -->
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.UI.SourceGenerators.dll" target="tools/roslyn-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.Core.dll" target="tools/roslyn-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.Xaml.dll" target="tools/roslyn-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.Xaml.pdb" target="tools/roslyn-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Uno.UI.SourceGenerators.pdb" target="tools/roslyn-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Mono.Cecil*.dll" target="tools/roslyn-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Mono.Cecil*.pdb" target="tools/roslyn-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Microsoft.ApplicationInsights.dll" target="tools/roslyn-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\System.Diagnostics.DiagnosticSource.dll" target="tools/roslyn-sourcegen" />
+	<file src="..\src\SourceGenerators\Uno.UI.SourceGenerators\Bin\Release\Microsoft.DotNet.PlatformAbstractions.dll" target="tools/roslyn-sourcegen" />
 
 	<file src="..\src\SourceGenerators\Uno.UI.Tasks\Bin\Release\*.dll" target="buildTransitive\Uno.UI.Tasks" />
 	<file src="..\src\SourceGenerators\Uno.UI.Tasks\Bin\Release\*.pdb" target="buildTransitive\Uno.UI.Tasks" />
